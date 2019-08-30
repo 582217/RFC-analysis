@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[9]:
+#%%
 import re
 import pandas as pd
 import requests
@@ -94,9 +94,8 @@ df_nti=pd.concat([df_num,df_title,df_info],axis=1)
 df_nti.columns=['num','title','date','status','stream','area','wg']
 
 #%%
-txt = open(r"C:\Users\wuyim\Desktop\area2.txt", "r+")
-txt_content = txt.read()
-txt.close()
+
+txt_content = 'EPP | FTP | HTTP | iCalendar | IDNA | IMAP | LDAP | MIME | OAuth | POP3 | URN | vCard | XMPP | RTSP | RTP | SDP | SIP | VoIP | DHCPv4 | DHCPv6 | DNS | IPv4 | IPv6 | MIPv4 | MIPv6 | MPLS | NTP | PWE3 | CAPWAP | Diameter | NETCONF | RADIUS | SMI | SNMP | YANG | BGP | CIDR | IS-IS | LDP | OSPF | PIM | RSVP-TE | VRRP | DKIM | IKEv1 | IKEv2 | Kerberos | OpenPGP | PEM | SSH | Syslog | TLS | DCCP | MTU+Discovery | PCN | ROHC | SCTP | nat64+or+dns64'
 area2_list=txt_content.split(' | ')
 ls_serch_res=list()
 ls_num4k=list()
