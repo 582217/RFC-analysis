@@ -41,3 +41,10 @@ https://datatracker.ietf.org/list/wg/   工作组邮件列表
 
 领域-数量 工作组-数量 Stream-数量 Status-数量 条形图
 
+
+## 这一周要做的工作
+
+RFC重要性量化（先做dns的）
+爬取全部邮件列表
+
+
