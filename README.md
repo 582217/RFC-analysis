@@ -44,7 +44,9 @@ https://datatracker.ietf.org/list/wg/   工作组邮件列表
 
 ## 这一周要做的工作
 
-RFC重要性量化（先做dns的）
-爬取全部邮件列表
+RFC重要性量化（先做dns的） 
+
+~~爬取全部邮件列表~~  
+获取现存邮件频率
 
 
