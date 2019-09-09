@@ -47,8 +47,12 @@ https://datatracker.ietf.org/list/wg/   工作组邮件列表
 
 ## 这一周要做的工作
 
+获取每个RFC的谷歌搜索结果数 （怎么解析JS？）衡量RFC重要性
 
-获取每个RFC的谷歌搜索结果数 （怎么解析JS？）
+
+分析草案特征
+
+
 
 
 
