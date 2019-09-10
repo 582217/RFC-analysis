@@ -50,9 +50,16 @@ https://datatracker.ietf.org/list/wg/   工作组邮件列表
 获取每个RFC的谷歌搜索结果数 （怎么解析JS？）衡量RFC重要性
 
 
-分析草案特征
+~~分析草案特征~~
 
 
-主席邮件列表？
+主席邮件？
+https://tools.ietf.org/wg/dnsop/agenda
+直接从agenda提取热点草案，获取标题和abstract
 
 
+寻找曾是热点的废弃草案：  
+1.获取所有rfc历史草案名  
+2.获取所有草案名  
+3.作差，去重
+4.查询所有废弃草案的迭代次数和最终状态  
