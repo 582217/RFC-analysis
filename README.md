@@ -66,7 +66,7 @@ https://datatracker.ietf.org/list/wg/   工作组邮件列表
   https://mailarchive.ietf.org/arch/browse/dnsop/ past month, thread, [@id="message-thread"]  
 
 
-**寻找曾是热点的废弃草案： **   
+**寻找曾是热点的废弃草案：**  
 
   1.获取所有废弃草案名  
   2.查询所有废弃草案的迭代次数和最终状态     
