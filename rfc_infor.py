@@ -1,18 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 #%%
 import re
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from urllib import request
 import time
 from dateutil import parser
 
 def re_crawler(url,pattern):
-    content = request.urlopen(url).read()
-    res = re.findall(pattern, content.decode('utf-8'), re.I)
+    content = requests.get(url)
+    res = re.findall(pattern, content.text, re.I)
     return (res)
 
 def title_process(title):
@@ -50,7 +48,6 @@ def title_process(title):
 
             title_table.append([date,status,stream,area,wg])
 
-
 def get_table(url):
     res = requests.get(url)
     soup = BeautifulSoup(res.text, 'lxml')
@@ -68,33 +65,27 @@ def tonum (i):
 df=get_table('https://www.rfc-editor.org/rfc-index2.html')
 df=df[5:]
 
-
 #%%
 title_table=[]
-
 df[1].apply(title_process)
 df_info=pd.DataFrame(title_table,columns=['date','status','stream','area','wg'])
-df_info
 
 #%%
 df_title=pd.DataFrame(re_crawler('https://www.rfc-editor.org/rfc-index2.html',r"<b>(.*?)</b>"))
 df_title=df_title[2:]
 df_title.reset_index(drop=True,inplace=True)
-df_title
 
 #%%
 num_list=[]
 for n in df[df[1]!="Not Issued"][0]:
     num_list.append(int(str(n).split(';')[1]))
 df_num=pd.DataFrame(num_list)
-df_num
 
 #%%
 df_nti=pd.concat([df_num,df_title,df_info],axis=1)
 df_nti.columns=['num','title','date','status','stream','area','wg']
 
 #%%
-
 txt_content = 'EPP | FTP | HTTP | iCalendar | IDNA | IMAP | LDAP | MIME | OAuth | POP3 | URN | vCard | XMPP | RTSP | RTP | SDP | SIP | VoIP | DHCPv4 | DHCPv6 | DNS | IPv4 | IPv6 | MIPv4 | MIPv6 | MPLS | NTP | PWE3 | CAPWAP | Diameter | NETCONF | RADIUS | SMI | SNMP | YANG | BGP | CIDR | IS-IS | LDP | OSPF | PIM | RSVP-TE | VRRP | DKIM | IKEv1 | IKEv2 | Kerberos | OpenPGP | PEM | SSH | Syslog | TLS | DCCP | MTU+Discovery | PCN | ROHC | SCTP | nat64+or+dns64'
 area2_list=txt_content.split(' | ')
 ls_serch_res=list()
@@ -121,17 +112,9 @@ df_kwds.reset_index(drop=True,inplace=True)
 df_nak=pd.concat([df_num4k,df_area2,df_kwds],axis=1)
 df_nak.drop_duplicates(inplace=True)
 df_nak.columns=['num','area2','key words']
-df_nak
-
 
 #%%
 grp=df_nak.groupby('num')
 df_akn=grp.agg(lambda x:', '.join(x))
-
 df_result=pd.merge(df_nti,df_akn,how='outer',on='num')
-df_result
-
-#%%
 df_result.to_csv(r'C:\Users\wuyim\Desktop\rfc_infor.csv')
-
-#%%

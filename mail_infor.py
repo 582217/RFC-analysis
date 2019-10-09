@@ -5,13 +5,11 @@ import re
 import time
 import pandas as pd
 
-
 #%%
 def re_crawler(url, pattern):
-    content = requests.get(url).text
-    res = re.findall(pattern, content, re.I)
+    content = requests.get(url)
+    res = re.findall(pattern, content.text, re.I)
     return (res)
-
 
 all_mail_lists = re_crawler('https://mailarchive.ietf.org/arch/browse/',
                             r"<a class=\"browse-link\"(.*?)</a>")

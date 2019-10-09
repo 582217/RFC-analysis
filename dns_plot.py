@@ -51,8 +51,6 @@ df_dns['date']=pd.to_datetime(df_dns['date'])
 df_dns['year']=df_dns['date'].dt.year
 
 
-#%%
-
 plt.figure(figsize=(20, 10))
 sns.countplot(df_dns['year'])
 
