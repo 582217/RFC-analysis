@@ -4,6 +4,8 @@ import json
 import pandas as pd
 import time
 
+#%%
+
 df = pd.read_csv('rfc_infor.csv')
 df.drop(columns='Unnamed: 0',inplace=True)
 df_dns=df[df.area2=='DNS'].copy()
@@ -32,7 +34,7 @@ df_dcl
 #%%
 df_res=pd.concat([df_dns,df_dcl],axis=1)
 df_res=df_res.rename(columns={0:'drafts count'})
-df_res.to_csv(r'C:\Users\wuyim\Desktop\dns_infor0.csv')
+df_res.to_csv('dns_infor0.csv')
 
 
 #%%
@@ -45,10 +47,10 @@ plt.show()
 
 #%%
 print(df_res[10<df_res['drafts count']])
-df_res.to_csv(r'C:\Users\wuyim\RFC-analysis\dns_infor0.csv')
+df_res.to_csv('dns_infor0.csv')
 
 #%%
-dns_serch_res=pd.read_csv(r'C:\Users\wuyim\Desktop\dns_serch_res.csv')
+dns_serch_res=pd.read_csv('dns_serch_res.csv')
 
 def to_num(str0):
     str1 = str0.split('（')[0]
@@ -67,3 +69,16 @@ df=pd.merge(df_dns,dns_serch_res,how='outer',left_on='num',right_on='0')
 #%%
 df.sort_values('1',ascending=False,inplace=True)
 df
+
+#%%
+df0 = pd.read_csv('rfc_infor.csv')
+dfd = pd.read_csv('dns_infor0.csv')
+df0.drop(columns=['Unnamed: 0','title','date','status','stream','area','wg','area2','key words'],inplace=True)
+df=pd.merge(dfd,df0,how='inner',on='num')
+df.drop(columns=['Unnamed: 0'],inplace=True)
+df
+
+# %%
+df.to_csv('dns_infor0.csv')
+
+# %%
