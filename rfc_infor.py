@@ -22,7 +22,7 @@ def title_process(title):
     stream='null'
     area='null'
     wg='null'
-
+    obsoleted=False
     if title != "Not Issued":
             date = re.findall(p1,title)[0]
             oth_inf = re.findall(p2,title)
@@ -31,8 +31,8 @@ def title_process(title):
                     pass
                 if "Update" in brac:
                     pass
-                if "Obsolete"in brac:
-                    pass
+                if "Obsoleted-By"in brac:
+                    obsoleted=True
                 if "Status" in brac:
                     status = brac.split(":")[1]
                 if "Stream" in brac:
@@ -46,7 +46,7 @@ def title_process(title):
                     if "Area" not in brac and "WG" not in brac:
                         stream = brac.split(":")[1]
 
-            title_table.append([date,status,stream,area,wg])
+            title_table.append([date,status,stream,area,wg,obsoleted])
 
 def get_table(url):
     res = requests.get(url)
@@ -64,11 +64,9 @@ def tonum (i):
 #%%
 df=get_table('https://www.rfc-editor.org/rfc-index2.html')
 df=df[5:]
-
-#%%
 title_table=[]
 df[1].apply(title_process)
-df_info=pd.DataFrame(title_table,columns=['date','status','stream','area','wg'])
+df_info=pd.DataFrame(title_table,columns=['date','status','stream','area','wg','obsoleted'])
 
 #%%
 df_title=pd.DataFrame(re_crawler('https://www.rfc-editor.org/rfc-index2.html',r"<b>(.*?)</b>"))
@@ -83,7 +81,9 @@ df_num=pd.DataFrame(num_list)
 
 #%%
 df_nti=pd.concat([df_num,df_title,df_info],axis=1)
-df_nti.columns=['num','title','date','status','stream','area','wg']
+df_nti.columns=['num','title','date','status','stream','area','wg','obsoleted']
+df_nti.tail(10)
+
 
 #%%
 txt_content = 'EPP | FTP | HTTP | iCalendar | IDNA | IMAP | LDAP | MIME | OAuth | POP3 | URN | vCard | XMPP | RTSP | RTP | SDP | SIP | VoIP | DHCPv4 | DHCPv6 | DNS | IPv4 | IPv6 | MIPv4 | MIPv6 | MPLS | NTP | PWE3 | CAPWAP | Diameter | NETCONF | RADIUS | SMI | SNMP | YANG | BGP | CIDR | IS-IS | LDP | OSPF | PIM | RSVP-TE | VRRP | DKIM | IKEv1 | IKEv2 | Kerberos | OpenPGP | PEM | SSH | Syslog | TLS | DCCP | MTU+Discovery | PCN | ROHC | SCTP | nat64+or+dns64'
@@ -117,4 +117,25 @@ df_nak.columns=['num','area2','key words']
 grp=df_nak.groupby('num')
 df_akn=grp.agg(lambda x:', '.join(x))
 df_result=pd.merge(df_nti,df_akn,how='outer',on='num')
-df_result.to_csv(r'C:\Users\wuyim\Desktop\rfc_infor.csv')
+df_result.to_csv('rfc_infor.csv')
+
+#%%
+# # df0 = pd.read_csv('rfc_infor.csv')
+# # df1 = df_nti.copy().drop(columns=['title','date','status','stream','area','wg'])
+# # df_res = pd.merge(df0,df1,how='inner',on='num')
+# # df_res.to_csv('rfc_infor.csv')
+
+# # # %%
+# # df_res.to_csv('rfc_infor.csv')
+
+
+# # # %%
+
+# df = pd.read_csv('rfc_infor.csv')
+# df.drop(columns=['Unnamed: 0','Unnamed: 0.1'],inplace=True)
+# df.head()
+
+# # %%
+# df.to_csv('rfc_infor.csv')
+
+# # %%

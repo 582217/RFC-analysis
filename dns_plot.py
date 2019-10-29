@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns 
 from matplotlib import pyplot as plt
 
-df = pd.read_csv(r'C:\Users\wuyim\Desktop\rfc_infor.csv')
+df = pd.read_csv('rfc_infor.csv')
 df.drop(columns='Unnamed: 0',inplace=True)
 
 
@@ -20,6 +20,11 @@ for c in df_dns.columns:
 df_dns['wg'].replace('NON WORKING GROUP','N W G',inplace=True)
 plt.figure(figsize=(20, 10))
 sns.countplot(x='wg',data=df_dns)
+plt.show()
+
+#%%
+plt.figure(figsize=(20, 10))
+sns.countplot(x='status',data=df_dns)
 plt.show()
 
 

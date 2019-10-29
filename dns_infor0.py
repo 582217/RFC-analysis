@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import time
 
-df = pd.read_csv(r'C:\Users\wuyim\Desktop\rfc_infor.csv')
+df = pd.read_csv('rfc_infor.csv')
 df.drop(columns='Unnamed: 0',inplace=True)
 df_dns=df[df.area2=='DNS'].copy()
 df_dns=df_dns.reset_index(drop=True)
