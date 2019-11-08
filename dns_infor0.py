@@ -3,6 +3,10 @@ import requests
 import json
 import pandas as pd
 import time
+from lxml import etree
+import re
+ 
+
 
 #%%
 
@@ -80,5 +84,44 @@ df
 
 # %%
 df.to_csv('dns_infor0.csv')
+
+# %%
+df=pd.read_csv('dns_infor0.csv')
+df_ps=df[df.status==' PROPOSED STANDARD']
+df_ps[df.obsoleted==False].to_csv('psn.csv')
+# %%
+df=pd.read_csv('dns_ps_F.csv')
+df.drop(columns='Unnamed: 0',inplace=True)
+
+# %%
+df.head()
+
+# %%
+for n in df['num']:
+    url='https://www.rfc-editor.org/info/rfc{}'.format(n)
+    page = requests.get(url)
+    tree = etree.HTML(page.text)
+    abstract = tree.xpath(
+        '//*[@id="post-127"]/div/p[5]/text()')[0]
+    abstract=abstract.replace('\n','').replace('\r',' ')
+    print(abstract)
+    f = open('dns_ps_F_abstract.txt','a')
+    f.write(abstract)
+    f.write('\n')
+    f.close()
+    time.sleep(3)
+
+# %%
+l=[]
+for line in open(r"C:\Users\wuyim\github\keywords_extraction_rake\output.txt"):  
+    p = re.compile(r'[\'](.*?)[\']', re.S)  #最小匹配 
+    l.append(re.findall(p,line))
+# %%
+for n in df['num']:
+    f = open('dnspdfkeywords','a')
+    f.write(str(n))
+    f.write(str(l.pop(0)))
+    f.write('\n')
+    f.close()
 
 # %%

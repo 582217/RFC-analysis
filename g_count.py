@@ -31,7 +31,7 @@ dns_serch_res=pd.DataFrame(serch_res)
 dns_serch_res.to_csv(r'C:\Users\wuyim\Desktop\dns_serch_res.csv')
 
 #%%
-dns_serch_res=pd.read_csv(r'C:\Users\wuyim\Desktop\dns_serch_res.csv')
+dns_serch_res=pd.read_csv('dns_serch_res.csv')
 
 def to_num(str0):
     str1 = str0.split('（')[0]

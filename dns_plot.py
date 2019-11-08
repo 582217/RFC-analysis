@@ -11,7 +11,8 @@ df_dns=df[df.area2=='DNS'].copy()
 df_dns.fillna('null',inplace=True)
 for c in df_dns.columns:
     if c != 'num':
-        df_dns[c]=df_dns[c].str.strip()
+        if c != 'obsoleted':
+            df_dns[c].apply(str.strip)
 
 
 
@@ -52,6 +53,7 @@ plt.show()
 
 
 #%%
+df_dns=df_dns[df_dns.status==' PROPOSED STANDARD']
 df_dns['date']=pd.to_datetime(df_dns['date'])
 df_dns['year']=df_dns['date'].dt.year
 
@@ -71,3 +73,5 @@ sns.heatmap(pivo,cmap='Reds')
 #%%
 coun=df_dns.groupby('year',as_index=False).count()
 sns.tsplot(coun.num,coun.year)
+
+# %%

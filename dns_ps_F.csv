@@ -1,0 +1,77 @@
+,num,title,date,status,stream,area,wg,area2,key words,drafts count,obsoleted
+0,8624,Algorithm Implementation Requirements and Usage Guidance for DNSSEC, June 2019 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,,14,False
+1,8586,Loop Detection in Content Delivery Networks (CDNs), April 2019 , PROPOSED STANDARD, IETF, art, httpbis,DNS,"CDN-Loop, ",4,False
+5,8509,A Root Key Trust Anchor Sentinel for DNSSEC, December 2018 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,"DNSSEC, KSK, RFC5011, DNS, rollover, root-key-sentinel-is-ta-, root-key-sentinel-not-ta-, root key, security",23,False
+7,8490,DNS Stateful Operations, March 2019 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,,24,False
+8,8482,Providing Minimal-Sized Responses to DNS Queries That Have QTYPE=ANY, January 2019 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,"DNS, ANY, REFUSE, DDOS, ABUSE",12,False
+13,8198,Aggressive Use of DNSSEC-Validated Cache, July 2017 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,"Negative cache, NCACHE, NSEC, NSEC3",15,False
+14,8145,Signaling Trust Anchor Knowledge in DNS Security Extensions (DNSSEC), April 2017 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,"DNS, DNSSEC, Trust Anchor",7,False
+16,8080,Edwards-Curve Digital Security Algorithm (EdDSA) for DNSSEC, February 2017 , PROPOSED STANDARD, IETF, sec, curdle,DNS,"DNSSEC, EdDSA, ed25519, ed448",14,False
+17,8078,Managing DS Records from the Parent via CDS/CDNSKEY, March 2017 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,"dnssec, trust maintenance",9,False
+19,8006,Content Delivery Network Interconnection (CDNI) Metadata, December 2016 , PROPOSED STANDARD, IETF, art, cdni,DNS,"CDN, cascaded CDN, cascading CDNs, content acquisition, content delegation, request delegation, acquisition protocol, delivery restriction, delivery policy, policy enforcement, delivery protocol, content expiration, geo-fencing, geofencing, geo fencing, geo-blocking,  geoblocking, geo blocking, footprint, cache control",22,False
+20,8005,Host Identity Protocol (HIP) Domain Name System (DNS) Extension, October 2016 , PROPOSED STANDARD, IETF, int, hip,DNS,"HIP, Host Identity Protocol, Host Identity Payload, DNS, Domain Name System",11,False
+23,7873,Domain Name System (DNS) Cookies, May 2016 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,"denial of service, forgery, cache poisoning, off-path",17,False
+25,7830,The EDNS(0) Padding Option, May 2016 , PROPOSED STANDARD, IETF, int, dprive,DNS,"Domain Name System, DNS, EDNS, EDNS0, Security, Encryption, Padding",6,False
+26,7828,The edns-tcp-keepalive EDNS0 Option, April 2016 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,"long-lived, dnssec, DNS, TCP/IP, transport",9,False
+28,7766,DNS Transport over TCP - Implementation Requirements, March 2016 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,"DNS, TCP/IP, transport",8,False
+39,7505,"A ""Null MX"" No Service Resource Record for Domains That Accept No Mail", June 2015 , PROPOSED STANDARD, IETF, art, appsawg,DNS,"DNS, e-mail",14,False
+40,7477,Child-to-Parent Synchronization in DNS, March 2015 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,,11,False
+42,7344,Automating DNSSEC Delegation Trust Maintenance, September 2014 , PROPOSED STANDARD, IETF, ops, dnsop,DNS,"key roll, trust anchor, CDS, CDNSKEY, DNSSEC, DNS",21,False
+44,7218,Adding Acronyms to Simplify Conversations about DNS-Based Authentication of Named Entities (DANE), April 2014 , PROPOSED STANDARD, IETF, sec, dane,DNS,"DNSSEC, DANE, Applications",5,False
+45,7216,Location Information Server (LIS) Discovery Using IP Addresses and Reverse DNS, April 2014 , PROPOSED STANDARD, IETF, rai, geopriv,DNS,"HELD, LIS, Discovery, NAT, Residential Gateway",14,False
+49,6975,Signaling Cryptographic Algorithm Understanding in DNS Security Extensions (DNSSEC), July 2013 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"DNS, DNSSEC, EDNS",11,False
+56,6844,DNS Certification Authority Authorization (CAA) Resource Record, January 2013 , PROPOSED STANDARD, IETF, sec, pkix,DNS,"[--------], DNS, DNSSEC, PKIX",21,False
+58,6840,Clarifications and Implementation Notes for DNS Security (DNSSEC), February 2013 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"EAP, AAA, reconnect",22,False
+61,6763,DNS-Based Service Discovery, February 2013 , PROPOSED STANDARD, IETF,, NON WORKING GROUP,DNS,,13,False
+62,6762,Multicast DNS, February 2013 , PROPOSED STANDARD, IETF,, NON WORKING GROUP,DNS,,16,False
+64,6731,Improved Recursive DNS Server Selection for Multi-Interfaced Nodes, December 2012 , PROPOSED STANDARD, IETF, int, mif,DNS,"DNS, RDNSS, interface, FQDN, selection",21,False
+65,6725,DNS Security (DNSSEC) DNSKEY Algorithm IANA Registry Updates, August 2012 , PROPOSED STANDARD, IETF, int, dnsext,DNS,[--------],6,False
+66,6672,DNAME Redirection in the DNS, June 2012 , PROPOSED STANDARD, IETF, int, dnsext,DNS,[--------],27,False
+67,6641,Using DNS SRV to Specify a Global File Namespace with NFS Version 4, June 2012 , PROPOSED STANDARD, IETF, tsv, nfsv4,DNS,"[--------], domainroot, domain root file system",18,False
+68,6605,Elliptic Curve Digital Signature Algorithm (DSA) for DNSSEC, April 2012 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------], dnskey algorithm, ds hash algo, crypto, DNS key, DNSKEY algorithm, DS, digest hash cryptography, SHA-384, ECDSAP256SHA256, ECDSAP384SHA384",8,False
+69,6604,xNAME RCODE and Status Bits Clarification, April 2012 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------], DNS, DNSSEC, CNAME, DNAME, Domain Name, response code, canonical name",7,False
+76,6116,The E.164 to Uniform Resource Identifiers (URI) Dynamic Delegation Discovery System (DDDS) Application (ENUM), March 2011 , PROPOSED STANDARD, IETF, rai, enum,DNS,"[--------], DNS, E.164, NAPTR, dynamic delegation discovery system, e164.arpa",10,False
+77,6014,Cryptographic Algorithm Identifier Allocation for DNSSEC, November 2010 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------], DNSSEC, digital signatures, algorithms",4,False
+79,5936,DNS Zone Transfer Protocol (AXFR), June 2010 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------], authoritative transfer, AXFR mechanism",15,False
+80,5933,Use of GOST Signature Algorithms in DNSKEY and RRSIG Resource Records for DNSSEC, July 2010 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------], domain name system security extensions, ECC",10,False
+81,5864,DNS SRV Resource Records for AFS, April 2010 , PROPOSED STANDARD, IETF,, NON WORKING GROUP,DNS,"[--------], domain name system, srv rr, distributed file system, afsdb rr",6,False
+83,5702,Use of SHA-2 Algorithms with RSA in DNSKEY and RRSIG Resource Records for DNSSEC, October 2009 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------], DNSSEC, RSA, SHA-256, SHA-512",15,False
+84,5679,Locating IEEE 802.21 Mobility Services Using DNS, December 2009 , PROPOSED STANDARD, IETF, int, mipshop,DNS,"[--------], domain name server, handover preparation, handover decision, media independent handover services",8,False
+88,5452,Measures for Making DNS More Resilient against Forged Answers, January 2009 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------], spoofing, source port, hardening",11,False
+93,5155,DNS Security (DNSSEC) Hashed Authenticated Denial of Existence, March 2008 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------], domain name system, nsec, resource record, nsec3",14,False
+96,5001,DNS Name Server Identifier (NSID) Option, August 2007 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------|p], domain name space, namespace",6,False
+99,4955,DNS Security (DNSSEC) Experiments, July 2007 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------|p], domain namespace",5,False
+102,4759,"The ENUM Dip Indicator Parameter for the ""tel"" URI", December 2006 , PROPOSED STANDARD, IETF, rai, iptel,DNS,"[--------|p], DNS, E.164, telephone number",6,False
+103,4703,Resolution of Fully Qualified Domain Name (FQDN) Conflicts among Dynamic Host Configuration Protocol (DHCP) Clients, October 2006 , PROPOSED STANDARD, IETF, int, dhc,DNS,"[--------|p], dynamic assignment, dns, dhcid dns rr",13,False
+104,4701,A DNS Resource Record (RR) for Encoding Dynamic Host Configuration Protocol (DHCP) Information (DHCID RR), October 2006 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------|p], dns fqdn, fully qualified domain name",14,False
+107,4635,"HMAC SHA (Hashed Message Authentication Code, Secure Hash Algorithm) TSIG Algorithm Identifiers", August 2006 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------|p], dns, resource record, rr, cryptographic message authentication code, cmac",7,False
+108,4509,Use of SHA-256 in DNSSEC Delegation Signer (DS) Resource Records (RRs), May 2006 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------|p], domain name system, dns, dnskey",6,False
+109,4501,Domain Name System Uniform Resource Identifiers, May 2006 , PROPOSED STANDARD, IETF,, NON WORKING GROUP,DNS,"[--------|p], dns, uri",14,False
+111,4470,Minimally Covering NSEC Records and DNSSEC On-line Signing, April 2006 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[--------|p], dns security, domain name system",5,False
+113,4398,Storing Certificates in the Domain Name System (DNS), March 2006 , PROPOSED STANDARD, IETF, int, dnsext,DNS,"[SC-DNS|p], cryptology, authenticity",10,False
+116,4343,Domain Name System (DNS) Case Insensitivity Clarification, January 2006 , PROPOSED STANDARD, IETF, int, dnsext,DNS,[--------|p],7,False
+120,4143,Facsimile Using Internet Mail (IFAX) Service of ENUM, November 2005 , PROPOSED STANDARD, IETF, app, fax,DNS,"[--------|p], naptr, enum naming authority pointer, facsimile using internet mail, dns, domain name system",4,False
+121,4035,Protocol Modifications for the DNS Security Extensions, March 2005 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], domain name system, authentication, origin integrity, dnssec, domain name system security extensions ",10,False
+122,4034,Resource Records for the DNS Security Extensions, March 2005 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], domain name system, authentication, origin integrity, dnssec, domain name system security extensions ",12,False
+123,4033,DNS Security Introduction and Requirements, March 2005 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], domain name system, authentication, origin integrity, dnssec, domain name system security extensions ",14,False
+125,4025,A Method for Storing IPsec Keying Material in DNS, March 2005 , PROPOSED STANDARD, IETF, sec, ipseckey,DNS, [--------|p] ,13,False
+134,3645,Generic Security Service Algorithm for Secret Key Transaction Authentication for DNS (GSS-TSIG), October 2003 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], TSIG, domain name system, transaction, signature ",7,False
+135,3597,Handling of Unknown DNS Resource Record (RR) Types, September 2003 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], domain name system, name server software, compression, transparency ",7,False
+139,3425,Obsoleting IQUERY, November 2002 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], dns lookups, domain ",5,False
+140,3403,Dynamic Delegation Discovery System (DDDS) Part Three: The Domain Name System (DNS) Database, October 2002 , PROPOSED STANDARD, IETF, app, urn,DNS," [NAPTR|p], domain name system, RR ",10,False
+141,3397,Dynamic Host Configuration Protocol (DHCP) Domain Search Option, November 2002 , PROPOSED STANDARD, IETF,, NON WORKING GROUP,DNS," [--------|p], dns, client, client server ",10,False
+143,3225,Indicating Resolver Support of DNSSEC, December 2001 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], domain, name, system, security, extensions ",4,False
+149,3110,RSA/SHA-1 SIGs and RSA KEYs in the Domain Name System (DNS), May 2001 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], RRs, resource, records, security ",4,False
+154,3007,Secure Domain Name System (DNS) Dynamic Update, November 2000 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], security, authentication, validation, DNSSEC ",3,False
+155,2931,DNS Request and Transaction Signatures ( SIG(0)s ), September 2000 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [--------|p], domain name system, data, security ",3,False
+156,2930,Secret Key Establishment for DNS (TKEY RR), September 2000 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [TKEY-RR|p], domain name system, resource record, transaction key ",5,False
+160,2845,Secret Key Transaction Authentication for DNS (TSIG), May 2000 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [TSIG|p], domain, name, system, transaction, signature ",1,False
+162,2782,A DNS RR for specifying the location of services (DNS SRV), February 2000 , PROPOSED STANDARD, IETF, int, dnsext,DNS," [DNS-SRV|p], domain, name, system, resource, record ",6,False
+170,2539,Storage of Diffie-Hellman Keys in the Domain Name System (DNS), March 1999 , PROPOSED STANDARD, IETF, sec, dnssec,DNS," [DHK-DNS|p], cryptology, authentication, security, signatures, digital ",4,False
+173,2536,DSA KEYs and SIGs in the Domain Name System (DNS), March 1999 , PROPOSED STANDARD, IETF, sec, dnssec,DNS," [--------|p], digital, signature, algorithm, signatures, cryptology ",4,False
+178,2308,Negative Caching of DNS Queries (DNS NCACHE), March 1998 , PROPOSED STANDARD, IETF, int, dnsind,DNS," [DNS-NCACHE|p], Domain, Name, System, negative ",10,False
+183,2181,Clarifications to the DNS Specification, July 1997 , PROPOSED STANDARD, IETF, int, dnsind,DNS," [DNS-CLAR|p], Domain, Name, System ",9,False
+185,2136,Dynamic Updates in the Domain Name System (DNS UPDATE), April 1997 , PROPOSED STANDARD, IETF, int, dnsind,DNS,"[DNS-UPDATE|p], database, opcode, zone ",10,False
+188,1996,A Mechanism for Prompt Notification of Zone Changes (DNS NOTIFY), August 1996 , PROPOSED STANDARD, IETF, int, dnsind,DNS," [DNS-NOTIFY|p], Domain, Name, System ",8,False
+189,1995,Incremental Zone Transfer in DNS, August 1996 , PROPOSED STANDARD, IETF, int, dnsind,DNS," [DNS-IZT|p], Domain, Name, System, IXFR ",7,False
+190,1982,Serial Number Arithmetic, August 1996 , PROPOSED STANDARD, IETF, int, dnsind,DNS," [SNA|p], domain, name, system, DNS ",3,False
